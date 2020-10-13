@@ -1,23 +1,19 @@
-import React from "react";
-//import MyCard from 'materialcard';
+import React from 'react';
 import Button from '@material-ui/core/Button';
+import { List, Datagrid, TextField, EmailField } from 'react-admin';
 
-import { withRouter } from 'react-router';
+export const UserList = (props) => (
+  <List {...props}>
+        <Datagrid rowClick="edit">
+            <TextField source="id" />
+            <TextField source="name" />
+            <TextField source="username" />
+           <TextField source="address.street" />
+            <TextField source="phone" />
+            <TextField source="website" />
+            <TextField source="company.name" />
+        </Datagrid>
+    </List>
+);
 
-import { Admin, Resource, ListGuesser } from 'react-admin';
-import jsonServerProvider from 'ra-data-json-server';
 
-
-
-const Pretty = (props) => {
-  const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
-
-  return (
-    <Admin dataProvider={dataProvider} >
-      <Resource name="users" list={ListGuesser} />
-    </Admin>
-
-  )
-};
-
-export default withRouter(Pretty);
