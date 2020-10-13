@@ -1,16 +1,14 @@
 import React from "react";
-import { Route, Switch } from 'react-router-dom';
-import "./App.css";
-import UsersMain from './components/UsersMain';
-import ProductDetail from './components/productdetail';
+import { Admin, Resource } from 'react-admin';
+import jsonServerProvider from 'ra-data-json-server';
+import {UserList} from './components/UsersMain';
+
+const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
 function App() {
   return (
-    <div className="App">
-      <Switch>
-        <Route path="/productDetail" exact component={ProductDetail} />
-        <Route path="/" exact component={UsersMain} />
-      </Switch>
-    </div>
+    <Admin dataProvider={dataProvider}>
+    <Resource name="users" list={UserList}></Resource>
+  </Admin>
   );
 }
 
