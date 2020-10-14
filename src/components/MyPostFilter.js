@@ -1,5 +1,5 @@
 import React from 'react';
-import {Filter, SearchInput} from 'react-admin';
+import { Filter, SearchInput } from 'react-admin';
 import { makeStyles } from '@material-ui/core/styles';
 import PostFilterForm from './PostFilterForm';
 
@@ -9,18 +9,18 @@ const useFilterStyles = makeStyles({
     },
 });
 
-const MyPostFilter= ( props)=>{
+const MyPostFilter = (props) => {
     const classes = useFilterStyles();
-    return(
+    return (
         // <Filter {...props}>
-        // <SearchInput className={classes.form} source="q" alwaysOn/>
+        //     <SearchInput className={classes.form} source="q" alwaysOn />
         // </Filter>
 
         <Filter classes={classes} {...props}>
-         <PostFilterForm {...props} source="q" alwaysOn/> 
-         </Filter>
-        
-      
+            <PostFilterForm {...props} source="q" alwaysOn />
+        </Filter>
+
+
     );
 }
 
