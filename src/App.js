@@ -1,14 +1,14 @@
 import React from "react";
 import { Admin, Resource } from 'react-admin';
 import jsonServerProvider from 'ra-data-json-server';
-import {UserList} from './components/UsersMain';
+import {PostList} from './components/PostList';
 
 const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
 function App() {
   //changes for commit.
   return (
     <Admin dataProvider={dataProvider}>
-    <Resource name="users" list={UserList}></Resource>
+    <Resource name="posts" list={PostList}></Resource>
   </Admin>
   );
 }
