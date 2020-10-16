@@ -11,7 +11,6 @@ const useFilterStyles = makeStyles({
         width: 500,
      },
 });
-
 const MyPostFilter = (props) => {
     const classes = useFilterStyles();
     let form = null;
