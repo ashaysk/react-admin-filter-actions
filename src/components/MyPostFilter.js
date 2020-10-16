@@ -10,7 +10,6 @@ const useFilterStyles = makeStyles({
     form: {
         width: 500,
      },
-  
 });
 
 const MyPostFilter = (props) => {
