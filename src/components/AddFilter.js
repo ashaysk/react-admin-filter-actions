@@ -14,7 +14,7 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import Divider from '@material-ui/core/Divider';
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: '13%',
+        maxWidth: '230px',
         backgroundColor: theme.palette.background.paper,
         position: 'absolute',
         maxHeight: 400,
